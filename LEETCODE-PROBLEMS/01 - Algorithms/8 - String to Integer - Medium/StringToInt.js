@@ -1,4 +1,4 @@
-"""
+/**
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer 
 (similar to C/C++'s atoi function).
 
@@ -39,36 +39,20 @@ Example 1:
 
 The parsed integer is 42.
 Since 42 is in the range [-2^31, 2^31 - 1], the final result is 42.
+ */
 
-"""
-import re
-class StringToInt(object):
-    
-    # this works for pretty much all cases except
-    # if the expected output is 0 in case of non digit
-    # chars before number 
-    def myAtoi(self, s):
-        rp = r'[^+\-\d]'
-        n = int(re.sub(rp, '', s))
-        if n > 2**31 - 1: return 2**31 - 1
-        elif n < -2**31: return -2**31
-        return n
-
-    # this regex pattern will handle non digit, and
-    # non + or - chars at beginning of s
-    # Time Complexity: Linear | O(n) where n is the length of s
-    def myAtoi_2(self, s):
-        rp = r'^\s*([+-]?\d+)'
-        match = re.match(rp, s)
-        if match:
-            n = int(match.group(1))
-            if n > 2**31 - 1: return 2**31 - 1
-            elif n < -2**31: return -2**31
-            return n
-        return 0 
-
-a = StringToInt()
-s = "word and -42"
-print(a.myAtoi(s))
-print(a.myAtoi_2(s))
-        
+/**
+ * Time Complexity: Linear | O(n) where n is the length of s
+ * @param {*} s input string containing integer
+ * @returns clean integer version of s
+ */
+var stringToInt = function(s) {
+    let rp = new RegExp('^\\s*([+-]?\\d+)');
+    let match = s.match(rp);
+    if (match) {
+        let n = parseInt(match[1])
+        if (n > math.pow(2, 31) - 1) return math.pow(2, 31) - 1;
+        else if (n < -math.pow(2, 31)) return -math.pow(2, 31);
+        return n; 
+    } return 0;
+}
