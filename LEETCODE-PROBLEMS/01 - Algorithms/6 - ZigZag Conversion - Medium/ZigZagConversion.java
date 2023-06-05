@@ -20,7 +20,7 @@ import java.util.Arrays;
 public class ZigZagConversion {
 
     /**
-     * Time Complexity: O(n) where n is length of s
+     * Time Complexity: Linear | O(n) where n is length of s
      * @param s input string
      * @param n number of rows
      * @return converted zigzag string
