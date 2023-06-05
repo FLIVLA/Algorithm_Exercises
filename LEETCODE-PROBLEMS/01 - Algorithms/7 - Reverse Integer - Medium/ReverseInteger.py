@@ -28,6 +28,8 @@ class ReverseInt(object):
     # Avoid conversion from int to string, and use mathematical
     # operators to reverse digits instead.
     # this will speed up the process significantly! 
+    #
+    # Time Complexity: Logarithmic time | O(log(n)) where n is the number of digits in x
     def reverseInt_turboMode(self, x):
         s = -1 if x < 0 else 1
         y = abs(x)  # absolute value of x
