@@ -19,7 +19,7 @@ class ZigZagConversion(object):
     
     # Initial Attempt
     def zigZag_Convert(self, s, n):
-        if n >= len(s): return s
+        if n >= len(s) or n <= 1: return s
         else:
             rows = ['' for _ in range(n)]    # create n empty rows 
             index, step = 0, 1
