@@ -1,3 +1,4 @@
+
 class BinarySearch(object):
     
     def search_PosOf_t(self, nums, t):
