@@ -1,7 +1,7 @@
 class BinarySearch {
-
     /**
      * BINARY SEARCH FOR SORTED NUMBER[]
+     * Time Complexity: Linear | O(log n)
      * @param nums input sorted number array
      * @param t target value
      * @returns index of t in nums

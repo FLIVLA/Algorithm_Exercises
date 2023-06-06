@@ -1,0 +1,14 @@
+BUBBLE-SORT
+---------------------------------------------------------
+simple comparison based sorting algorithm. NOT efficient
+for large datasets.
+
+useful in scenarios below:
+- simplicity and easy implementation. 
+- Nearly sorted or small datasets.
+- Learning to understand sorting algorithms.
+
+When using this, the datastructure to be sorted, will most
+likely be an array or a list.
+
+Guess it's not that useful afterall?
