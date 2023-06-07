@@ -1,4 +1,6 @@
 class FindIdxOfFirst(object):
+    
+    # home made stuff 
     def findIdx(self, haystack, n):
         if haystack == n: 
             return 0
@@ -11,7 +13,7 @@ class FindIdxOfFirst(object):
             nR += 1
         return -1                            # in case of no occurences return -1
 
-
+    # not sure if this is faster?
     def findIdx_2(self, haystack, n):
         if n not in haystack:
             return -1
