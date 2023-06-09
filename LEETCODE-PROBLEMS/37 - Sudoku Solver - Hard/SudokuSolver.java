@@ -1,6 +1,17 @@
 public class SudokuSolver {
     private int rec;
 
+    private void print(int[][] matrix) {
+        String hor = "-------------------------------------";
+        System.out.println(hor);
+        for (int r = 0; r < matrix.length; r++) {
+            String l = "| ";
+            for (int c = 0; c < matrix[r].length; c++) {
+                l += String.format("%1s | ", matrix[r][c]);
+            } System.out.println(l); System.out.println(hor);
+        }
+    }
+
     private boolean validate_n(int[][] matrix, int y, int x, int n) {
         for (int i = 0; i < 9; i++) { // Check row
             if (matrix[y][i] == n) { return false; }
@@ -30,6 +41,6 @@ public class SudokuSolver {
                     }
                 } return;
             }
-        }
+        } print(matrix);
     }
 }
